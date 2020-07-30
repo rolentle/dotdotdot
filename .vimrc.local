@@ -1,0 +1,29 @@
+syntax enable
+set background=light
+let g:solarized_termcolors=256
+let g:rspec_command = '!bundle exec bin/rspec {spec}'
+colorscheme solarized
+let mapleader=","
+map <leader>n :NERDTreeToggle<CR>
+set rtp+=/usr/local/opt/fzf
+map <C-p> :FZF<CR>
+inoremap jj <Esc>
+inoremap kj <Esc>
+inoremap jk <Esc>
+inoremap kk <Esc>
+nnoremap <leader>ev :vs $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+set tabstop=4 shiftwidth=4 expandtab
+set hlsearch
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+noremap <Leader>a :Ack! <cword><cr>
+:set colorcolumn=72
+
+nnoremap <space> za
