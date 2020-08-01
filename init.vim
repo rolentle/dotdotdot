@@ -52,7 +52,6 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-dadbod'
 Plug '/usr/local/opt/fzf'
 Plug 'vim-syntastic/syntastic'
-Plug 'ryanoasis/vim-devicons'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " staticly check code and highlight errors (async syntastic replacement)
