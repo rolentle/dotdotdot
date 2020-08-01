@@ -143,3 +143,6 @@ endif
 
 noremap <Leader>a :Ack! <cword><cr>
 :set colorcolumn=72
+set spell
+set encoding=UTF-8
+
