@@ -9,7 +9,6 @@ end
 
 call plug#begin('~/.vim/bundle')
 
-
 " Make sure you use single quotes
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'godlygeek/tabular'
