@@ -52,6 +52,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-dadbod'
 Plug '/usr/local/opt/fzf'
 Plug 'vim-syntastic/syntastic'
+Plug 'leafgarland/typescript-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " staticly check code and highlight errors (async syntastic replacement)
@@ -59,6 +60,10 @@ Plug 'w0rp/ale'
 
 " Initialize plugin system
 call plug#end()
+
+let g:coc_global_extensions = [
+  \ 'coc-tsserver'
+  \ ]
 
 syntax on
 filetype plugin indent on
