@@ -53,6 +53,7 @@ Plug 'tpope/vim-dadbod'
 Plug '/usr/local/opt/fzf'
 Plug 'vim-syntastic/syntastic'
 Plug 'leafgarland/typescript-vim'
+Plug 'ianks/vim-tsx'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " staticly check code and highlight errors (async syntastic replacement)
