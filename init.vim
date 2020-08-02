@@ -108,6 +108,7 @@ nnoremap <leader>pt :!prettier %<CR>
     let g:ale_fixers = {
           \   'javascript': ['prettier'],
           \   'javascript.jsx': ['prettier'],
+          \   'typescript': ['prettier'],
           \   'json': ['prettier'],
           \   'scss': ['prettier'],
           \   'ruby': ['rubocop'],
