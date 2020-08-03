@@ -7,7 +7,7 @@ if &compatible
   set nocompatible
 end
 
-call plug#begin('~/.vim/bundle')
+call plug#begin('~/.config/nvim')
 
 " Make sure you use single quotes
 Plug 'AndrewRadev/splitjoin.vim'
