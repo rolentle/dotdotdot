@@ -121,6 +121,7 @@ nnoremap <leader>pt :!prettier %<CR>
 
 " }}}
 
+let g:javascript_plugin_jsdoc = 1
 syntax enable
 set background=light
 let g:solarized_termcolors=256
@@ -128,8 +129,24 @@ let g:rspec_command = '!bundle exec bin/rspec {spec}'
 colorscheme solarized
 let mapleader=","
 map <leader>n :NERDTreeToggle<CR>
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeIgnore = []
+let g:NERDTreeStatusline = ''
+" Automaticaly close nvim if NERDTree is only thing left open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" turn terminal to normal mode with escape
+tnoremap <Esc> <C-\><C-n>
+
 set rtp+=/usr/local/opt/fzf
 map <C-p> :FZF<CR>
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit'
+  \}
+
 inoremap jj <Esc>
 inoremap kj <Esc>
 inoremap jk <Esc>
