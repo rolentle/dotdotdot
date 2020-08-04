@@ -1,70 +1,99 @@
-# Store 10,000 history entries
-export HISTSIZE=10000
-# Don't store duplicates
-export HISTCONTROL=erasedups
-VISUAL=nvim
-EDITOR="$VISUAL"
-LESS="FRX"
-RI="--format ansi -T"
-PSQL_EDITOR='vim -c"setf sql"'
-CLICOLOR=1
-LSCOLORS=gxgxcxdxbxegedabagacad
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export VISUAL EDITOR LESS RI PSQL_EDITOR CLICOLOR LSCOLORS
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/rolentle/.oh-my-zsh"
 
-export HISTIGNORE="%*"
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
 
-plugins=(
-  p10k
-)
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-# [ -z "$PS1" ] || stty -ixon
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
 
-# prefix=
-# if [ -n "$SSH_CONNECTION" ]; then
-#   prefix="\[\033[01;33m\]\u@\h"
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
 # else
-#   prefix="\[\033[01;32m\]\u@\h"
+#   export EDITOR='mvim'
 # fi
 
-# [ -z "$PS1" ] || export PS1="$prefix\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$(git_prompt_info '(%s)')$ "
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
 
-# if [ -f '/usr/local/etc/bash_completion.d/git-completion.bash' ]; then
-#   source '/usr/local/etc/bash_completion.d/git-completion.bash'
-# fi
-
-# [ ! -f "$HOME/.bashrc.local" ] || . "$HOME/.bashrc.local"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-alias tml='tmux ls'
-alias tmn='tmux new -s'
-alias tma='tmux attach -t'
-alias gundo='git reset --soft HEAD~1'
-alias grs='git rebase --skip'
-alias gap='git add -p'
-alias gnap='git add -N --ignore-removal . && gap'
-alias glp='git log -p'
-alias glg='git log --graph --oneline --decorate --color --all'
-alias gb='git branch'
-alias gc='git commit -v'
-alias gca='git commit -a -v'
-alias gcl='git clean -f -d'
-alias gd='git diff'
-alias gdc='git diff --cached'
-alias gdh='git diff HEAD'
-alias gl='git pull'
-alias glod='git log --oneline --decorate'
-# alias glod='git log --graph --pretty="%Cgreen%h%Creset%Cblue%d%Creset %Cred%an%Creset: %s"'
-alias gp='git push'
-alias gpr='git pull --rebase'
-alias gst='git status'
-alias gr='git rebase'
-alias grc='git rebase --continue'
-alias gra='git rebase --abort'
-alias gco='git checkout'
-alias reset-authors='git commit --amend --reset-author -C HEAD' 
-
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
