@@ -99,3 +99,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+. $(brew --prefix asdf)/asdf.sh
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/curl/bin:$PATH"
