@@ -1,8 +1,3 @@
-# ~/.bashrc
-# vim:set ft=sh sw=2 sts=2:
-
-source "$HOME/.sharedrc"
-
 # Store 10,000 history entries
 export HISTSIZE=10000
 # Don't store duplicates
@@ -10,7 +5,7 @@ export HISTCONTROL=erasedups
 # Append to history file
 shopt -s histappend
 
-VISUAL=vim
+VISUAL=nvim
 EDITOR="$VISUAL"
 LESS="FRX"
 RI="--format ansi -T"
@@ -50,3 +45,10 @@ fi
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+alias tml='tmux ls'
+alias tmn='tmux new -s'
+alias tma='tmux attach -t'
+alias gundo='git reset --soft HEAD~1'
+alias grs='git rebase --skip'
+

@@ -2,14 +2,17 @@
 
 dotfiles = .gitconfig \
 				.tmux.conf \
-				.bashrc
+				.zshrc
 
-install: symlink vim
+install: shell symlink vim
 
 cyan = "\\033[1\;96m"
 off  = "\\033[0m"
 echo.%:
 	@echo "\n$(cyan)Building $*$(off)"
+
+shell: echo.shell
+	bin/shell
 
 symlink: echo.symlink
 	@for file in $(dotfiles); do \
