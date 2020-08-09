@@ -62,7 +62,8 @@ Plug 'w0rp/ale'
 call plug#end()
 
 let g:coc_global_extensions = [
-  \ 'coc-tsserver'
+  \ 'coc-tsserver',
+  \ 'coc-python',
   \ ]
 
 syntax on
@@ -138,6 +139,17 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " turn terminal to normal mode with escape
 tnoremap <Esc> <C-\><C-n>
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 set rtp+=/usr/local/opt/fzf
 map <C-p> :FZF<CR>
