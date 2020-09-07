@@ -117,6 +117,7 @@ nnoremap <leader>pt :!prettier %<CR>
           \   'elixir': ['mix_format'],
           \}
 
+    let g:ale_linters = {'c': ['clang'], 'cpp': ['g++']}
     let g:ale_fix_on_save = 1
   " }}}
 
