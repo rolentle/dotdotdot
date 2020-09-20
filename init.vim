@@ -10,55 +10,68 @@ end
 call plug#begin('~/.config/nvim')
 
 " Make sure you use single quotes
-Plug 'AndrewRadev/splitjoin.vim'
-Plug 'godlygeek/tabular'
-Plug 'jgdavey/tslime.vim'
+"ruby plugins
 Plug 'jgdavey/vim-blockle'
-Plug 'jgdavey/vim-turbux'
-Plug 'leshill/vim-json'
-Plug 'mileszs/ack.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'rondale-sc/vim-spacejam'
-Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-cucumber'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-git'
-Plug 'tpope/vim-haml'
-Plug 'tpope/vim-markdown'
-Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-rsi'
-Plug 'tpope/vim-sensible'
+Plug 'vim-ruby/vim-ruby'
+Plug 'nelstrom/vim-textobj-rubyblock'
+
+"javascript plugins
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'ianks/vim-tsx'
+Plug 'leafgarland/typescript-vim'
+
+"sql plugins
+Plug 'exu/pgsql.vim'
+Plug 'tpope/vim-dadbod'
+
+"formating plugins
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'godlygeek/tabular'
+Plug 'rondale-sc/vim-spacejam'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'vim-ruby/vim-ruby'
-Plug 'kana/vim-textobj-user'
-Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'exu/pgsql.vim'
-Plug 'mxw/vim-jsx'
-Plug 'scrooloose/nerdtree'
-Plug 'altercation/vim-colors-solarized'
-Plug 'mileszs/ack.vim'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-dadbod'
-Plug '/usr/local/opt/fzf'
-Plug 'vim-syntastic/syntastic'
-Plug 'leafgarland/typescript-vim'
-Plug 'ianks/vim-tsx'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'vimwiki/vimwiki'
-Plug 'mattn/calendar-vim'
-
 " staticly check code and highlight errors (async syntastic replacement)
 Plug 'w0rp/ale'
+
+"tmux plugins
+Plug 'jgdavey/tslime.vim'
+Plug 'jgdavey/vim-turbux'
+Plug 'tpope/vim-dispatch'
+
+"search plugins
+Plug 'mileszs/ack.vim'
+Plug '/usr/local/opt/fzf'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+"misc plugins
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-haml'
+Plug 'leshill/vim-json'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-ragtag'
+Plug 'kana/vim-textobj-user'
+Plug 'tpope/vim-unimpaired'
+Plug 'scrooloose/nerdtree'
+Plug 'altercation/vim-colors-solarized'
+Plug 'vim-syntastic/syntastic'
+
+"git plugins
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-repeat'
+
+"vimwiki plugins
+Plug 'mattn/calendar-vim'
+Plug 'vimwiki/vimwiki'
+
 
 " Initialize plugin system
 call plug#end()
