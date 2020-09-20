@@ -1,8 +1,3 @@
-" vim: ft=vim
-" Vim Plugins via Vim Plug
-" Specify a directory for plugins
-" - For Neovim: ~/.local/share/nvim/plugged
-" - Avoid using standard Vim directory names like 'plugin'
 if &compatible
   set nocompatible
 end
@@ -72,16 +67,16 @@ Plug 'tpope/vim-repeat'
 Plug 'mattn/calendar-vim'
 Plug 'vimwiki/vimwiki'
 
-
 " Initialize plugin system
 call plug#end()
 
-syntax on
+syntax enable
 filetype plugin indent on
 
 set ignorecase
-set smartcase
-set number
+
+"set hybrid line numbers
+set number relativenumber
 
 set visualbell
 
@@ -94,7 +89,6 @@ set splitbelow
 set hidden
 
 let mapleader=","
-syntax enable
 
 inoremap jj <Esc>
 inoremap kj <Esc>
@@ -118,7 +112,7 @@ colorscheme solarized
 let g:solarized_termcolors=256
 set background=light
 
-set guifont=Monaco:h16
+set guifont=Monaco:h32
 set guioptions-=T guioptions-=e guioptions-=L guioptions-=r
 set shell=zsh
 
@@ -207,4 +201,3 @@ if executable('ag')
 endif
 
 noremap <Leader>a :Ack! <cword><cr>
-
