@@ -54,17 +54,14 @@ Plug 'vim-syntastic/syntastic'
 Plug 'leafgarland/typescript-vim'
 Plug 'ianks/vim-tsx'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vimwiki/vimwiki'
+Plug 'mattn/calendar-vim'
 
 " staticly check code and highlight errors (async syntastic replacement)
 Plug 'w0rp/ale'
 
 " Initialize plugin system
 call plug#end()
-
-let g:coc_global_extensions = [
-  \ 'coc-tsserver',
-  \ 'coc-python',
-  \ ]
 
 syntax on
 filetype plugin indent on
@@ -83,9 +80,34 @@ set splitbelow
 
 set hidden
 
+let mapleader=","
+syntax enable
+
+inoremap jj <Esc>
+inoremap kj <Esc>
+inoremap jk <Esc>
+inoremap kk <Esc>
+nnoremap <leader>ev :vs $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+set tabstop=4 shiftwidth=4 expandtab
+set hlsearch
+set colorcolumn=72
+set spell
+set encoding=UTF-8
+
+"colorscheme
+colorscheme solarized
+let g:solarized_termcolors=256
+set background=light
+
 set guifont=Monaco:h16
 set guioptions-=T guioptions-=e guioptions-=L guioptions-=r
-set shell=bash
+set shell=zsh
 
 augroup vimrc
   autocmd!
@@ -123,13 +145,10 @@ nnoremap <leader>pt :!prettier %<CR>
 
 " }}}
 
-let g:javascript_plugin_jsdoc = 1
-syntax enable
-set background=light
-let g:solarized_termcolors=256
 let g:rspec_command = '!bundle exec bin/rspec {spec}'
-colorscheme solarized
-let mapleader=","
+let g:javascript_plugin_jsdoc = 1
+
+"nerdtree
 map <leader>n :NERDTreeToggle<CR>
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
@@ -140,6 +159,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " turn terminal to normal mode with escape
 tnoremap <Esc> <C-\><C-n>
+
+"Coc autocomplete
+let g:coc_global_extensions = [
+  \ 'coc-tsserver',
+  \ 'coc-python',
+  \ ]
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
@@ -152,6 +177,7 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+"fzf
 set rtp+=/usr/local/opt/fzf
 map <C-p> :FZF<CR>
 let g:fzf_action = {
@@ -160,24 +186,12 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit'
   \}
 
-inoremap jj <Esc>
-inoremap kj <Esc>
-inoremap jk <Esc>
-inoremap kk <Esc>
-nnoremap <leader>ev :vs $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-set tabstop=4 shiftwidth=4 expandtab
-set hlsearch
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
 noremap <Leader>a :Ack! <cword><cr>
-:set colorcolumn=72
-set spell
-set encoding=UTF-8
 
