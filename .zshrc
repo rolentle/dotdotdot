@@ -98,6 +98,24 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
+# Store 10,000 history entries
+export HISTSIZE=10000
+# Don't store duplicates
+export HISTCONTROL=erasedups
+# Append to history file
+shopt -s histappend
+
+VISUAL=nvim
+EDITOR="$VISUAL"
+LESS="FRX"
+RI="--format ansi -T"
+PSQL_EDITOR='nvim -c"setf sql"'
+CLICOLOR=1
+LSCOLORS=gxgxcxdxbxegedabagacad
+
+export VISUAL EDITOR LESS RI PSQL_EDITOR CLICOLOR LSCOLORS
+
+export HISTIGNORE="%*"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
