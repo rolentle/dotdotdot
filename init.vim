@@ -19,6 +19,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'ianks/vim-tsx'
 Plug 'leafgarland/typescript-vim'
+Plug 'elmcast/elm-vim'
 
 "sql plugins
 Plug 'exu/pgsql.vim'
@@ -290,3 +291,9 @@ let g:nv_window_command = 'call FloatingFZF()'
 map <C-p> :FZF<cr>
 
 noremap <Leader>a :Rg <cword><cr>
+
+"elm plugins
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+
+let g:elm_syntastic_show_warnings = 1
