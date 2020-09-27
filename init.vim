@@ -63,8 +63,9 @@ source ~/.config/nvim/ale.vim
 let g:rspec_command = '!bundle exec bin/rspec {spec}'
 let g:javascript_plugin_jsdoc = 1
 
-
-
 source ~/.config/nvim/vimwiki.vim
-source ~/.config/coc.vim
-source ~/.config/nvim/fzf.vim
+source ~/.config/nvim/nerdtree.vim
+source ~/.config/nvim/coc.vim
+source ~/.config/nvim/fzf_search.vim
+
+nnoremap <leader>a :Rg <c-r>=expand("<cword>")<cr><cr>
