@@ -22,8 +22,8 @@ symlink: echo.symlink
 
 vim: echo.vim
 	mkdir -p ~/.config/nvim ;\
-	rm -rf ~/.config/nvim/init.vim ;\
-	ln -s $(shell pwd)/init.vim ~/.config/nvim/init.vim ;\
+	rm -rf ~/.config/nvim/* ;\
+	ln -s $(shell pwd)/*.vim ~/.config/nvim/;\
 	curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim;\
 	nvim --headless +PlugInstall +qa
 
