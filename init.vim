@@ -69,3 +69,4 @@ source ~/.config/nvim/coc.vim
 source ~/.config/nvim/fzf_search.vim
 
 nnoremap <leader>a :Rg <c-r>=expand("<cword>")<cr><cr>
+let g:python3_host_prog = "/usr/local/bin/python3"

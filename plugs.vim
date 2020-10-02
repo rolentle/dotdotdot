@@ -55,6 +55,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'scrooloose/nerdtree'
 Plug 'embark-theme/vim', { 'as': 'embark' }
 Plug 'vim-syntastic/syntastic'
+Plug 'mhinz/vim-startify'
 
 "git plugins
 Plug 'tpope/vim-fugitive'
@@ -66,6 +67,10 @@ Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 Plug 'mattn/calendar-vim'
 Plug 'https://github.com/alok/notational-fzf-vim'
 Plug 'ferrine/md-img-paste.vim'
+
+"snippets plugins
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Initialize plugin system
 call plug#end()
