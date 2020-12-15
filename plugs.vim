@@ -56,6 +56,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'embark-theme/vim', { 'as': 'embark' }
 Plug 'vim-syntastic/syntastic'
 Plug 'mhinz/vim-startify'
+Plug 'lifepillar/vim-solarized8'
+
 
 "git plugins
 Plug 'tpope/vim-fugitive'

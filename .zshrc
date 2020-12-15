@@ -103,7 +103,6 @@ export HISTSIZE=10000
 # Don't store duplicates
 export HISTCONTROL=erasedups
 # Append to history file
-shopt -s histappend
 
 VISUAL=nvim
 EDITOR="$VISUAL"

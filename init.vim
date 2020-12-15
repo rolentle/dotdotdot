@@ -44,7 +44,8 @@ set spell
 set encoding=UTF-8
 
 "colorscheme
-colorscheme embark
+set background=light
+colorscheme solarized8
 
 set guifont=Monaco:h32
 set guioptions-=T guioptions-=e guioptions-=L guioptions-=r
