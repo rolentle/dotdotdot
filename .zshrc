@@ -119,9 +119,7 @@ export HISTIGNORE="%*"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
 export PATH="/Users/rolentle/code/dotcom/node_modules/.bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-eval "$(rbenv init -)"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
 
@@ -163,3 +161,5 @@ alias tma='tmux attach -t'
   alias grs='git rebase --skip'
   alias gco='git checkout'
   alias reset-authors='git commit --amend --reset-author -C HEAD'
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
