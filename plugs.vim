@@ -53,11 +53,15 @@ Plug 'tpope/vim-ragtag'
 Plug 'kana/vim-textobj-user'
 Plug 'tpope/vim-unimpaired'
 Plug 'scrooloose/nerdtree'
-Plug 'embark-theme/vim', { 'as': 'embark' }
 Plug 'vim-syntastic/syntastic'
 Plug 'mhinz/vim-startify'
 Plug 'lifepillar/vim-solarized8'
 
+
+"colors plugins
+Plug 'embark-theme/vim', { 'as': 'embark' }
+Plug 'josegamez82/starrynight'
+Plug 'lifepillar/vim-solarized8'
 
 "git plugins
 Plug 'tpope/vim-fugitive'

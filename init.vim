@@ -61,7 +61,6 @@ nnoremap <leader>pt :!prettier %<CR>
 
 source ~/.config/nvim/ale.vim
 
-let g:rspec_command = '!bundle exec bin/rspec {spec}'
 let g:javascript_plugin_jsdoc = 1
 
 source ~/.config/nvim/vimwiki.vim
@@ -85,3 +84,7 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
+
+" let g:rspec_command = '!bundle exec bin/rspec {spec}'
+let g:rspec_command = '!./bin/drspec {spec}'
+let @" = expand("%")
