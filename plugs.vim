@@ -33,7 +33,6 @@ Plug 'w0rp/ale'
 
 "tmux plugins
 Plug 'jgdavey/tslime.vim'
-Plug 'jgdavey/vim-turbux'
 Plug 'tpope/vim-dispatch'
 
 "search plugins
@@ -62,6 +61,12 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'embark-theme/vim', { 'as': 'embark' }
 Plug 'josegamez82/starrynight'
 Plug 'lifepillar/vim-solarized8'
+Plug 'sheerun/vim-polyglot'
+Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
+
+"airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 "git plugins
 Plug 'tpope/vim-fugitive'

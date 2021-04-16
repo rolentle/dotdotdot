@@ -44,9 +44,17 @@ set spell
 set encoding=UTF-8
 
 "colorscheme
-set background=light
-colorscheme solarized8
+" set background=light
+" colorscheme solarized8
+"
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
+colorscheme spaceduck
+let g:airline_theme = 'spaceduck'
 set guifont=Monaco:h32
 set guioptions-=T guioptions-=e guioptions-=L guioptions-=r
 set shell=zsh
