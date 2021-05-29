@@ -16,7 +16,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'ianks/vim-tsx'
 Plug 'leafgarland/typescript-vim'
-Plug 'elmcast/elm-vim'
 
 "sql plugins
 Plug 'exu/pgsql.vim'
@@ -56,12 +55,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-syntastic/syntastic'
 Plug 'lifepillar/vim-solarized8'
 
-
 "colors plugins
-Plug 'embark-theme/vim', { 'as': 'embark' }
-Plug 'josegamez82/starrynight'
-Plug 'lifepillar/vim-solarized8'
-Plug 'sheerun/vim-polyglot'
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 
 "airline
