@@ -7,6 +7,7 @@ Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-cucumber'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
+Plug 'thoughtbot/vim-rspec'
 Plug 'vim-ruby/vim-ruby'
 Plug 'nelstrom/vim-textobj-rubyblock'
 
@@ -53,7 +54,6 @@ Plug 'kana/vim-textobj-user'
 Plug 'tpope/vim-unimpaired'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-syntastic/syntastic'
-Plug 'mhinz/vim-startify'
 Plug 'lifepillar/vim-solarized8'
 
 
