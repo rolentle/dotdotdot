@@ -14,7 +14,7 @@ let g:vimwiki_listsyms = ' ○◐●✓'
 " show all uncompleted todos with FZF and preview
 command! -bang -nargs=* WikiTodos
          \ call fzf#vim#grep(
-         \ join(['rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape('^- \[[ ]\] .+'), '~/.vim/vimwiki']), 1,
+         \ join(['rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape('^- \[[ ]\] .+'), '~/.config/nvim/vimwiki']), 1,
          \ fzf#vim#with_preview(), <bang>0)
 " NV-fzf floating window
 function! FloatingFZF()
@@ -35,13 +35,13 @@ let g:nv_window_command = 'call FloatingFZF()'
 function! SortWiki()
   let l:fzf_opts = {}
   let l:fzf_opts.sink = 'e'
-  let l:fzf_opts.dir = '~/.vim/vimwiki'
+  let l:fzf_opts.dir = '~/.config/nvim/vimwiki'
   let l:fzf_opts.source = 'ls -td $(fd .)'
-  let l:fzf_opts.options = '--delimiter ":" --preview="bat ~/.vim/vimwiki/{1}" --preview-window=right:80'
+  let l:fzf_opts.options = '--delimiter ":" --preview="bat ~/.config/nvim/vimwiki/{1}" --preview-window=right:80'
   call fzf#run(fzf#wrap(l:fzf_opts))
 endfunction
 let g:vimwiki_list = [{
-                      \ 'path': '~/.vim/vimwiki/',
+                      \ 'path': '~/.config/nvim/vimwiki/',
                       \ 'syntax': 'markdown',
                       \ 'ext': '.md',
                       \ 'auto_toc': 1,
@@ -49,7 +49,7 @@ let g:vimwiki_list = [{
 " gln to toggle forward
 " glp to toggle back
 let g:coc_filetype_map = { 'vimwiki': 'markdown' } " register with coc-markdownlint
-let g:nv_search_paths = ['~/.vim/vimwiki']
+let g:nv_search_paths = ['~/.config/nvim/vimwiki']
 nmap <Leader>wv :NV<CR>
 nmap <Leader>wdn <Plug>VimwikiMakeDiaryNote
 nmap <Leader>wdy <Plug>VimwikiMakeYesterdayDiaryNote
@@ -70,10 +70,10 @@ nmap <Leader>wx :call VimwikiFindIncompleteTasks()<CR>
 command! -bang -nargs=* SearchNotes
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
-  \   fzf#vim#with_preview({'dir': '~/.vim/vimwiki'}), <bang>0)
-command! -bang -nargs=* EditNote call fzf#vim#files('~/.vim/vimwiki', <bang>0)
+  \   fzf#vim#with_preview({'dir': '~/.config/nvim/vimwiki'}), <bang>0)
+command! -bang -nargs=* EditNote call fzf#vim#files('~/.config/nvim/vimwiki', <bang>0)
 command! -bang -nargs=0 NewNote
-            \ call vimwiki#base#edit_file(":e", strftime('~/.vim/vimwiki/%F-%T.md'), "")
+            \ call vimwiki#base#edit_file(":e", strftime('~/.config/nvim/vimwiki/%F-%T.md'), "")
 autocmd FileType markdown nmap <buffer><silent> <leader>p :call mdip#MarkdownClipboardImage()<CR>
 autocmd FileType markdown setlocal shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType markdown nmap <buffer> <silent> gf <Plug>VimwikiFollowLink<CR>
