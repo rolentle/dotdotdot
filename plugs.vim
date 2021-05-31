@@ -56,7 +56,8 @@ Plug 'vim-syntastic/syntastic'
 Plug 'lifepillar/vim-solarized8'
 
 "colors plugins
-Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
+Plug 'tjdevries/colorbuddy.vim'
+Plug 'tjdevries/gruvbuddy.nvim'
 
 "airline
 Plug 'vim-airline/vim-airline'
